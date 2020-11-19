@@ -17,6 +17,8 @@ import org.json.JSONObject;
 import name.jarodms.cordova.admob.AbstractExecutor;
 import name.jarodms.cordova.admob.AdMob;
 
+import android.graphics.Color;
+
 public class BannerExecutor extends AbstractExecutor {
     private static final String TAG = "BannerExecutor";
 
@@ -217,6 +219,7 @@ public class BannerExecutor extends AbstractExecutor {
                             parentView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 0.0F));
                             getWebView().setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1.0F));
                             parentView.addView(getWebView());
+                            parentView.setBackgroundColor(Color.parseColor("#242424"));
                             rootView.addView(parentView);
                         }
 
